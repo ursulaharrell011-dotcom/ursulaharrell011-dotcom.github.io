@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#16274e"/></linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.3" r="0.8"><stop offset="0" stop-color="#2a5cf0" stop-opacity="0.35"/><stop offset="1" stop-color="#1e84f5" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05"><path d="M0 158 H1200 M0 316 H1200 M0 474 H1200 M300 0 V630 M600 0 V630 M900 0 V630"/></g>
+  <g transform="translate(80,84)">
+    <rect rx="21" width="220" height="42" fill="#2a5cf0" fill-opacity="0.18" stroke="#2a5cf0" stroke-opacity="0.5"/>
+    <circle cx="28" cy="21" r="8" fill="#2a5cf0"/>
+    <text x="48" y="28" fill="#c0d8ff" font-size="19" font-weight="700">AI工具 · Claude</text>
+  </g>
+  <text x="80" y="268" fill="#ffffff" font-size="68" font-weight="800">Claude 频繁中断？</text>
+  <text x="80" y="348" fill="#a0c0ff" font-size="44" font-weight="700">NasaCode IEPL 稳定直连</text>
+  <text x="80" y="422" fill="#6a90c8" font-size="24">长对话不中断 · 代码补全流畅 · 全平台支持</text>
+  <g transform="translate(80,470)">
+    <rect rx="22" width="310" height="44" fill="#2a5cf0" fill-opacity="0.2" stroke="#2a5cf0" stroke-opacity="0.55"/>
+    <text x="24" y="29" fill="#c0d8ff" font-size="20" font-weight="700">✦ 免费体验 · nasacode.com</text>
+  </g>
+  <!-- hexagon AI decoration -->
+  <g transform="translate(940,310)">
+    <polygon points="0,-100 87,-50 87,50 0,100 -87,50 -87,-50" fill="none" stroke="#2a5cf0" stroke-opacity="0.3" stroke-width="2"/>
+    <polygon points="0,-68 59,-34 59,34 0,68 -59,34 -59,-34" fill="#2a5cf0" fill-opacity="0.1" stroke="#5daeff" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle r="26" fill="#2a5cf0" fill-opacity="0.85" stroke="none"/>
+    <text x="0" y="9" fill="#ffffff" font-size="24" font-weight="700" text-anchor="middle">C</text>
+  </g>
+</svg>
