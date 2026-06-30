@@ -23,7 +23,7 @@ jobs:
       - name: Build URL list and submit to IndexNow
         if: steps.changed.outputs.files != ''
         run: |
-          KEY="PLACEHOLDER_REPLACE_WITH_BING_KEY"
+          KEY="55175D6F18DBD1E8FDDB2F9172768240"
           HOST="ursulaharrell011-dotcom.github.io"
           BASE="https://$HOST"
 
