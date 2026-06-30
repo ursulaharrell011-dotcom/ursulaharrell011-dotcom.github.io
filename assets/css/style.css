@@ -1,15 +1,15 @@
 /* ===== NasaCode Blog · Custom Theme ===== */
 :root {
-  --bg: #f4f7fd;
+  --bg: #ffffff;
   --fg: #46556e;
   --muted: #7d8aa3;
   --heading: #1a2b45;
   --accent: #1e84f5;
   --accent-2: #2a5cf0;
-  --card: #ffffff;
+  --card: #f8faff;
   --border: #e4eaf4;
-  --header-bg: rgba(244, 247, 253, .95);
-  --code-bg: #e6f1fe;
+  --header-bg: rgba(255, 255, 255, .95);
+  --code-bg: #f0f6ff;
   --shadow: 0 10px 30px rgba(30, 100, 200, .08);
 }
 
@@ -130,7 +130,7 @@ img { max-width: 100%; height: auto; }
 .sidebar__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .sidebar__link-title { font-size: .85rem; font-weight: 600; color: var(--heading); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .sidebar__date { font-size: .75rem; color: var(--muted); }
-.sidebar__cta { background: linear-gradient(145deg, #edf4ff 0%, #d8e8fe 100%); border-color: rgba(30,132,245,.2); }
+.sidebar__cta { background: linear-gradient(145deg, #f5f9ff 0%, #eaf3ff 100%); border-color: rgba(30,132,245,.18); }
 .cta-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .cta-brand__logo { width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0; }
 .cta-brand__name { font-size: 1.08rem; font-weight: 800; color: var(--heading); }
