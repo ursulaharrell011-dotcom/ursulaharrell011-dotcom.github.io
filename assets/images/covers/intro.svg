@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,'PingFang SC','Microsoft YaHei',sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1f2d"/><stop offset="1" stop-color="#102818"/></linearGradient>
-    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.9"><stop offset="0" stop-color="#00c896" stop-opacity="0.3"/><stop offset="1" stop-color="#00c896" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#0c2160"/></linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.9"><stop offset="0" stop-color="#1e84f5" stop-opacity="0.3"/><stop offset="1" stop-color="#1e84f5" stop-opacity="0"/></radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
   <g stroke="#ffffff" stroke-opacity="0.05"><path d="M0 158 H1200 M0 316 H1200 M0 474 H1200 M300 0 V630 M600 0 V630 M900 0 V630"/></g>
   <g transform="translate(80,84)">
-    <rect rx="21" width="200" height="42" fill="#00c896" fill-opacity="0.16" stroke="#00c896" stroke-opacity="0.5"/>
-    <circle cx="28" cy="21" r="8" fill="#00c896"/>
-    <text x="48" y="28" fill="#c0f6e4" font-size="19" font-weight="700">产品介绍</text>
+    <rect rx="21" width="200" height="42" fill="#1e84f5" fill-opacity="0.16" stroke="#1e84f5" stroke-opacity="0.5"/>
+    <circle cx="28" cy="21" r="8" fill="#1e84f5"/>
+    <text x="48" y="28" fill="#c0d8ff" font-size="19" font-weight="700">产品介绍</text>
   </g>
   <text x="80" y="268" fill="#ffffff" font-size="64" font-weight="800">NasaCode</text>
-  <text x="80" y="348" fill="#b0e8d4" font-size="44" font-weight="700">AI VPN · 全球加速器</text>
-  <text x="80" y="422" fill="#7dbba3" font-size="24">极速稳定 · 隐私安全 · 全平台畅享</text>
+  <text x="80" y="348" fill="#90c0ff" font-size="44" font-weight="700">AI VPN · 全球加速器</text>
+  <text x="80" y="422" fill="#6a90c8" font-size="24">极速稳定 · 隐私安全 · 全平台畅享</text>
   <g transform="translate(80,470)">
-    <rect rx="22" width="300" height="44" fill="#00c896" fill-opacity="0.18" stroke="#00c896" stroke-opacity="0.55"/>
-    <text x="24" y="29" fill="#c0f6e4" font-size="20" font-weight="700">🌐 nasacode.com</text>
+    <rect rx="22" width="300" height="44" fill="#1e84f5" fill-opacity="0.18" stroke="#1e84f5" stroke-opacity="0.55"/>
+    <text x="24" y="29" fill="#c0d8ff" font-size="20" font-weight="700">🌐 nasacode.com</text>
   </g>
   <!-- globe decoration -->
   <g transform="translate(950,310)" fill="none" stroke-width="1.8">
-    <circle r="110" stroke="#00c896" stroke-opacity="0.28"/>
-    <ellipse rx="55" ry="110" stroke="#00c896" stroke-opacity="0.4"/>
-    <line x1="-110" y1="0" x2="110" y2="0" stroke="#00c896" stroke-opacity="0.3"/>
-    <line x1="0" y1="-110" x2="0" y2="110" stroke="#00c896" stroke-opacity="0.3"/>
-    <circle r="14" fill="#00c896" fill-opacity="0.9" stroke="none"/>
-    <path d="M-6 -1 L-1 5 L8 -8" stroke="#0d1f2d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle r="110" stroke="#1e84f5" stroke-opacity="0.28"/>
+    <ellipse rx="55" ry="110" stroke="#1e84f5" stroke-opacity="0.4"/>
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#1e84f5" stroke-opacity="0.3"/>
+    <line x1="0" y1="-110" x2="0" y2="110" stroke="#1e84f5" stroke-opacity="0.3"/>
+    <circle r="14" fill="#1e84f5" fill-opacity="0.9" stroke="none"/>
+    <path d="M-6 -1 L-1 5 L8 -8" stroke="#0c1a3a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
