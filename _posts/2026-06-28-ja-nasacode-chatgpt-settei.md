@@ -58,12 +58,12 @@ NasaCodeは以下のAIサービスへの接続を最適化しています：
 
 ## 使い方
 
-1. [nasacode.com](https://www.nasacode.com/ja/) にアクセスしてクライアントをダウンロード
+1. [nasacode.com](https://www.nasacode.com/ja/download) にアクセスしてクライアントをダウンロード
 2. Windows / macOS / iOS / Android すべてに対応
 3. 登録不要で無料トライアル開始
 4. ワンクリックで接続、AI最適化ルーティングが自動で有効化
 
-> 🚀 [NasaCodeを無料で試す](https://www.nasacode.com/ja/) — IEPL専用線で、ChatGPTが快適に使えます
+> 🚀 [NasaCodeを無料で試す](https://www.nasacode.com/ja/download) — IEPL専用線で、ChatGPTが快適に使えます
 
 ## よくある質問
 

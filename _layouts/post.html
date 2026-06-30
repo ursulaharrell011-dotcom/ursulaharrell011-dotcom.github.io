@@ -94,19 +94,19 @@ layout: default
         <a class="btn btn--primary" href="https://www.nasacode.com/">🚀 Try NasaCode Free — AI VPN</a>
         <a class="btn btn--ghost" href="{{ '/en/' | relative_url }}">← Back to Home</a>
       {% elsif lang == 'vi' %}
-        <a class="btn btn--primary" href="https://www.nasacode.com/vi/">🚀 Dùng thử NasaCode miễn phí</a>
+        <a class="btn btn--primary" href="https://www.nasacode.com/vi/download">🚀 Dùng thử NasaCode miễn phí</a>
         <a class="btn btn--ghost" href="{{ '/vi/' | relative_url }}">← Trang Chủ</a>
       {% elsif lang == 'ja' %}
-        <a class="btn btn--primary" href="https://www.nasacode.com/ja/">🚀 NasaCodeを無料で試す</a>
+        <a class="btn btn--primary" href="https://www.nasacode.com/ja/download">🚀 NasaCodeを無料で試す</a>
         <a class="btn btn--ghost" href="{{ '/ja/' | relative_url }}">← ホームへ</a>
       {% elsif lang == 'ko' %}
-        <a class="btn btn--primary" href="https://www.nasacode.com/ko/">🚀 NasaCode 무료 체험</a>
+        <a class="btn btn--primary" href="https://www.nasacode.com/ko/download">🚀 NasaCode 무료 체험</a>
         <a class="btn btn--ghost" href="{{ '/ko/' | relative_url }}">← 홈으로</a>
       {% elsif lang == 'tr' %}
-        <a class="btn btn--primary" href="https://www.nasacode.com/tr/">🚀 NasaCode'u Ücretsiz Dene</a>
+        <a class="btn btn--primary" href="https://www.nasacode.com/tr/download">🚀 NasaCode'u Ücretsiz Dene</a>
         <a class="btn btn--ghost" href="{{ '/tr/' | relative_url }}">← Ana Sayfa</a>
       {% else %}
-        <a class="btn btn--primary" href="https://www.nasacode.com/zh/">🚀 立即免费体验 NasaCode</a>
+        <a class="btn btn--primary" href="https://www.nasacode.com/zh/download">🚀 立即免费体验 NasaCode</a>
         <a class="btn btn--ghost" href="{{ '/' | relative_url }}">← 返回首页</a>
       {% endif %}
     </footer>
@@ -156,7 +156,7 @@ layout: default
             <li>Windows / macOS / iOS / Android 全平台</li>
         {% endcase %}
       </ul>
-      <a class="btn btn--primary sidebar__cta-btn" href="https://www.nasacode.com/{% if lang != 'zh' %}{{ lang }}/{% else %}zh/{% endif %}">
+      <a class="btn btn--primary sidebar__cta-btn" href="https://www.nasacode.com/{% if lang != 'zh' %}{{ lang }}/{% else %}zh/{% endif %}download">
         {% case lang %}
           {% when 'en' %}Get Started Free →
           {% when 'vi' %}Bắt đầu miễn phí →

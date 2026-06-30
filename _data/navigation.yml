@@ -4,7 +4,7 @@ zh:
   - title: 关于
     url: /about/
   - title: 免费试用
-    url: https://www.nasacode.com/zh/
+    url: https://www.nasacode.com/zh/download
 
 en:
   - title: Home
@@ -20,7 +20,7 @@ vi:
   - title: Giới thiệu
     url: /about/
   - title: Dùng thử miễn phí
-    url: https://www.nasacode.com/vi/
+    url: https://www.nasacode.com/vi/download
 
 ja:
   - title: ホーム
@@ -28,7 +28,7 @@ ja:
   - title: About
     url: /about/
   - title: 無料トライアル
-    url: https://www.nasacode.com/ja/
+    url: https://www.nasacode.com/ja/download
 
 ko:
   - title: 홈
@@ -36,7 +36,7 @@ ko:
   - title: 소개
     url: /about/
   - title: 무료 체험
-    url: https://www.nasacode.com/ko/
+    url: https://www.nasacode.com/ko/download
 
 tr:
   - title: Ana Sayfa
@@ -44,4 +44,4 @@ tr:
   - title: Hakkında
     url: /about/
   - title: Ücretsiz Dene
-    url: https://www.nasacode.com/tr/
+    url: https://www.nasacode.com/tr/download

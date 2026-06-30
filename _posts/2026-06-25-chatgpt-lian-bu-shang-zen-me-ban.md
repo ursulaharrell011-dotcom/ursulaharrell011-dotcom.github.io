@@ -62,12 +62,12 @@ NasaCode 对以下 AI 平台均有专项优化：
 
 ## 怎么开始用
 
-1. 访问 [nasacode.com](https://www.nasacode.com/zh/) 下载客户端，支持 Windows / macOS / iOS / Android
+1. 访问 [nasacode.com](https://www.nasacode.com/zh/download) 下载客户端，支持 Windows / macOS / iOS / Android
 2. 无需注册，直接免费体验
 3. 一键连接，AI 优化路由自动生效
 4. 打开 ChatGPT，感受延迟差异
 
-> 🚀 [立即免费体验 NasaCode](https://www.nasacode.com/zh/) — IEPL 专线直连，ChatGPT 秒开不转圈
+> 🚀 [立即免费体验 NasaCode](https://www.nasacode.com/zh/download) — IEPL 专线直连，ChatGPT 秒开不转圈
 
 ## 常见问题
 

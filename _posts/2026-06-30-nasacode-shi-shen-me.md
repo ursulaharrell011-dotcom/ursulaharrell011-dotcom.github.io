@@ -40,4 +40,4 @@ NasaCode 对以下平台进行了专项线路优化：
 
 ## 开始使用
 
-> 🚀 [立即免费体验 NasaCode](https://www.nasacode.com/zh/) — IEPL 专线直连，极速稳定访问所有 AI 平台
+> 🚀 [立即免费体验 NasaCode](https://www.nasacode.com/zh/download) — IEPL 专线直连，极速稳定访问所有 AI 平台
