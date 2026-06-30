@@ -1,0 +1,213 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: 'zh' %}
+{% assign lang_posts = site.posts | where: "lang", lang %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ site.title }}",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ site.url }}{{ page.url }}"
+    }
+  ]
+}
+</script>
+
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if page.howto %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ page.howto.name | jsonify }},
+  "description": {{ page.howto.description | jsonify }},
+  "step": [
+    {% for step in page.howto.steps %}
+    {
+      "@type": "HowToStep",
+      "name": {{ step.name | jsonify }},
+      "text": {{ step.text | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<div class="post-layout">
+  <article class="post" itemscope itemtype="https://schema.org/Article">
+    {% if page.image %}
+    <div class="post__cover">
+      <img data-src="{{ page.image | relative_url }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'/%3E" alt="{{ page.title }}" width="1200" height="630" itemprop="image">
+    </div>
+    {% endif %}
+
+    <header class="post__header">
+      <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
+      <div class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%Y-%m-%d' }}</time>{% if page.categories.size > 0 %} · {{ page.categories | join: ' / ' }}{% endif %}
+        <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="{{ site.author.name }}">
+        </span>
+      </div>
+    </header>
+
+    <div class="post__content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <footer class="post__footer">
+      {% if lang == 'en' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/">🚀 Try NasaCode Free — AI VPN</a>
+        <a class="btn btn--ghost" href="{{ '/en/' | relative_url }}">← Back to Home</a>
+      {% elsif lang == 'vi' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/vi/">🚀 Dùng thử NasaCode miễn phí</a>
+        <a class="btn btn--ghost" href="{{ '/vi/' | relative_url }}">← Trang Chủ</a>
+      {% elsif lang == 'ja' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/ja/">🚀 NasaCodeを無料で試す</a>
+        <a class="btn btn--ghost" href="{{ '/ja/' | relative_url }}">← ホームへ</a>
+      {% elsif lang == 'ko' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/ko/">🚀 NasaCode 무료 체험</a>
+        <a class="btn btn--ghost" href="{{ '/ko/' | relative_url }}">← 홈으로</a>
+      {% elsif lang == 'tr' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/tr/">🚀 NasaCode'u Ücretsiz Dene</a>
+        <a class="btn btn--ghost" href="{{ '/tr/' | relative_url }}">← Ana Sayfa</a>
+      {% else %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/zh/">🚀 立即免费体验 NasaCode</a>
+        <a class="btn btn--ghost" href="{{ '/' | relative_url }}">← 返回首页</a>
+      {% endif %}
+    </footer>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar__section sidebar__cta">
+      <div class="cta-brand">
+        <img class="cta-brand__logo" src="{{ '/assets/images/nasacode-logo.svg' | relative_url }}" alt="NasaCode" width="38" height="38">
+        <span class="cta-brand__name">NasaCode</span>
+      </div>
+      <p class="cta-tagline">
+        {% case lang %}
+          {% when 'en' %}AI VPN · IEPL Line · Global Stable Acceleration
+          {% when 'vi' %}AI VPN · Đường IEPL · Tăng tốc toàn cầu ổn định
+          {% when 'ja' %}AI VPN · IEPL回線 · グローバル安定加速
+          {% when 'ko' %}AI VPN · IEPL 회선 · 글로벌 안정 가속
+          {% when 'tr' %}AI VPN · IEPL Hattı · Global Stabil Hızlandırma
+          {% else %}AI VPN · IEPL 专线 · 全球稳定加速
+        {% endcase %}
+      </p>
+      <ul class="cta-features">
+        {% case lang %}
+          {% when 'en' %}
+            <li>ChatGPT / Claude / Gemini optimized</li>
+            <li>Netflix / YouTube / Spotify unlocked</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'vi' %}
+            <li>Tối ưu ChatGPT / Claude / Gemini</li>
+            <li>Mở khóa Netflix / YouTube / Spotify</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'ja' %}
+            <li>ChatGPT / Claude / Gemini 最適化</li>
+            <li>Netflix / YouTube / Spotify 解放</li>
+            <li>Windows / macOS / iOS / Android 対応</li>
+          {% when 'ko' %}
+            <li>ChatGPT / Claude / Gemini 최적화</li>
+            <li>Netflix / YouTube / Spotify 해제</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'tr' %}
+            <li>ChatGPT / Claude / Gemini optimize</li>
+            <li>Netflix / YouTube / Spotify açık</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% else %}
+            <li>ChatGPT / Claude / Gemini 专项优化</li>
+            <li>Netflix / YouTube / Spotify 全解锁</li>
+            <li>Windows / macOS / iOS / Android 全平台</li>
+        {% endcase %}
+      </ul>
+      <a class="btn btn--primary sidebar__cta-btn" href="https://www.nasacode.com/{% if lang != 'zh' %}{{ lang }}/{% else %}zh/{% endif %}">
+        {% case lang %}
+          {% when 'en' %}Get Started Free →
+          {% when 'vi' %}Bắt đầu miễn phí →
+          {% when 'ja' %}無料で始める →
+          {% when 'ko' %}무료로 시작하기 →
+          {% when 'tr' %}Ücretsiz Başla →
+          {% else %}免费开始使用 →
+        {% endcase %}
+      </a>
+      <p class="cta-note">
+        {% case lang %}
+          {% when 'en' %}IEPL dedicated line · AI platform optimized
+          {% when 'vi' %}Đường IEPL riêng · Tối ưu nền tảng AI
+          {% when 'ja' %}IEPL専用回線 · AIプラットフォーム最適化
+          {% when 'ko' %}IEPL 전용 회선 · AI 플랫폼 최적화
+          {% when 'tr' %}IEPL özel hat · AI platformu optimize
+          {% else %}IEPL 专线直连 · AI 平台专项优化
+        {% endcase %}
+      </p>
+    </div>
+
+    <div class="sidebar__section">
+      <h3 class="sidebar__title">
+        {% case lang %}
+          {% when 'en' %}Recommended
+          {% when 'vi' %}Bài viết đề xuất
+          {% when 'ja' %}おすすめ記事
+          {% when 'ko' %}추천 글
+          {% when 'tr' %}Önerilen Yazılar
+          {% else %}推荐阅读
+        {% endcase %}
+      </h3>
+      <ul class="sidebar__list">
+        {% assign count = 0 %}
+        {% for post in lang_posts %}
+          {% if post.url != page.url and count < 5 %}
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="{{ post.url | relative_url }}">
+                {% if post.image %}
+                <img class="sidebar__thumb" data-src="{{ post.image | relative_url }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 210'/%3E" alt="{{ post.title }}" width="400" height="210">
+                {% endif %}
+                <div class="sidebar__text">
+                  <span class="sidebar__link-title">{{ post.title }}</span>
+                  <time class="sidebar__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+                </div>
+              </a>
+            </li>
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+</div>

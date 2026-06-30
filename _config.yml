@@ -1,0 +1,46 @@
+title: "NasaCode 博客 — AI VPN · 全球加速 · 稳定直连"
+description: >-
+  NasaCode 官方博客：面向 AI 用户与开发者的全球网络加速器。稳定访问 ChatGPT、Claude、GitHub Copilot，流媒体畅享 Netflix、YouTube。
+url: "https://ursulaharrell011-dotcom.github.io"
+baseurl: ""
+lang: zh-CN
+
+author:
+  name: "NasaCode"
+
+image: /assets/images/site-header.svg
+
+twitter:
+  card: summary_large_image
+
+social:
+  name: NasaCode
+  links:
+    - https://www.nasacode.com
+
+timezone: Asia/Shanghai
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: zh
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1f2d"/><stop offset="1" stop-color="#0f2d1e"/></linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.25" r="0.85"><stop offset="0" stop-color="#00c896" stop-opacity="0.35"/><stop offset="1" stop-color="#00c896" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05"><path d="M0 158 H1200 M0 316 H1200 M0 474 H1200 M300 0 V630 M600 0 V630 M900 0 V630"/></g>
+  <g transform="translate(80,84)">
+    <rect rx="21" width="230" height="42" fill="#00c896" fill-opacity="0.16" stroke="#00c896" stroke-opacity="0.5"/>
+    <circle cx="28" cy="21" r="8" fill="#00c896"/>
+    <text x="48" y="28" fill="#c0f6e4" font-size="19" font-weight="700">AI工具 · ChatGPT</text>
+  </g>
+  <text x="80" y="278" fill="#ffffff" font-size="68" font-weight="800">ChatGPT 连不上？</text>
+  <text x="80" y="358" fill="#b0e8d4" font-size="44" font-weight="700">NasaCode 一键稳定直连</text>
+  <text x="80" y="430" fill="#7dbba3" font-size="24">IEPL 专线 · AI 平台优化 · 全平台支持</text>
+  <g transform="translate(80,478)">
+    <rect rx="22" width="320" height="44" fill="#00c896" fill-opacity="0.18" stroke="#00c896" stroke-opacity="0.55"/>
+    <text x="24" y="29" fill="#c0f6e4" font-size="20" font-weight="700">🚀 免费体验 · nasacode.com</text>
+  </g>
+  <g transform="translate(940,300)" fill="none" stroke-width="2">
+    <circle r="100" stroke="#00c896" stroke-opacity="0.3"/>
+    <circle r="65" stroke="#00c896" stroke-opacity="0.5"/>
+    <circle r="28" fill="#00c896" fill-opacity="0.9" stroke="none"/>
+    <path d="M-10 -2 L-3 8 L14 -14" stroke="#0d1f2d" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="80" cy="-55" r="10" fill="#10a37f" stroke="none"/>
+    <text x="68" y="-42" fill="#10a37f" font-size="11" font-weight="700">GPT</text>
+  </g>
+</svg>

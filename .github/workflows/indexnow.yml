@@ -1,0 +1,64 @@
+name: IndexNow Submit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed post files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only HEAD~1 HEAD -- '_posts/*.md' | head -20)
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+      - name: Build URL list and submit to IndexNow
+        if: steps.changed.outputs.files != ''
+        run: |
+          KEY="PLACEHOLDER_REPLACE_WITH_BING_KEY"
+          HOST="ursulaharrell011-dotcom.github.io"
+          BASE="https://$HOST"
+
+          URLS=()
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            name=$(basename "$file" .md)
+            year=$(echo "$name" | cut -d- -f1)
+            month=$(echo "$name" | cut -d- -f2)
+            day=$(echo "$name" | cut -d- -f3)
+            slug=$(echo "$name" | cut -d- -f4-)
+            url="$BASE/$year/$month/$day/$slug/"
+            URLS+=("\"$url\"")
+          done <<< "${{ steps.changed.outputs.files }}"
+
+          if [ ${#URLS[@]} -eq 0 ]; then
+            echo "No valid URLs to submit."
+            exit 0
+          fi
+
+          URL_JSON=$(IFS=,; echo "[${URLS[*]}]")
+
+          PAYLOAD=$(cat <<EOF
+          {
+            "host": "$HOST",
+            "key": "$KEY",
+            "keyLocation": "$BASE/$KEY.txt",
+            "urlList": $URL_JSON
+          }
+          EOF
+          )
+
+          echo "Submitting: $PAYLOAD"
+
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD" \
+            -w "\nHTTP Status: %{http_code}\n"
