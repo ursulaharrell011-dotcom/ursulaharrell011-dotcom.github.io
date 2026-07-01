@@ -1,6 +1,8 @@
 ---
 title: "调用 Claude / OpenAI API 老是超时？开发者的 IEPL 专线实测"
 date: 2026-07-03 10:00:00 +0800
+redirect_from:
+  - /2026/07/03/ai-api-kai-fa-wen-ding/
 categories: [AI工具]
 tags: [Claude API, OpenAI API, AI开发, IEPL专线, NasaCode]
 lang: zh

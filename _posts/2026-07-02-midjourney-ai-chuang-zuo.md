@@ -1,6 +1,8 @@
 ---
 title: "Midjourney / DALL·E 出图卡顿？NasaCode 让 AI 创作流畅起来"
 date: 2026-07-02 10:00:00 +0800
+redirect_from:
+  - /2026/07/02/midjourney-ai-chuang-zuo/
 categories: [AI工具]
 tags: [Midjourney, DALL-E, Sora, AI绘图, NasaCode]
 lang: zh

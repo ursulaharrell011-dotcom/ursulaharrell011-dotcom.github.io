@@ -1,6 +1,7 @@
 ---
 title: "NasaCode for Developers — Stable AI API & Copilot Access via IEPL"
 date: 2026-07-04 10:00:00 +0800
+permalink: /:year/:month/:day/:title/
 categories: [AI Tools]
 tags: [NasaCode, GitHub Copilot, Claude API, developer, IEPL]
 lang: en

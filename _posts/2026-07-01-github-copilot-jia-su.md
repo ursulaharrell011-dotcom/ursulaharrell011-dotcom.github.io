@@ -1,6 +1,8 @@
 ---
 title: "GitHub Copilot 代码补全总超时？NasaCode IEPL 专线让 AI 编程不卡顿"
 date: 2026-07-01 10:00:00 +0800
+redirect_from:
+  - /2026/07/01/github-copilot-jia-su/
 categories: [AI工具]
 tags: [GitHub Copilot, AI编程, NasaCode, IEPL专线, Cursor]
 lang: zh

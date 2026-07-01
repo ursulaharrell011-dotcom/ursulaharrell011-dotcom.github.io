@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign lang = page.lang | default: 'zh' %}
+{% assign lang = page.lang | default: 'en' %}
 {% assign lang_posts = site.posts | where: "lang", lang %}
 
 <script type="application/ld+json">
@@ -92,7 +92,7 @@ layout: default
     <footer class="post__footer">
       {% if lang == 'en' %}
         <a class="btn btn--primary" href="https://www.nasacode.com/">🚀 Try NasaCode Free — AI VPN</a>
-        <a class="btn btn--ghost" href="{{ '/en/' | relative_url }}">← Back to Home</a>
+        <a class="btn btn--ghost" href="{{ '/' | relative_url }}">← Back to Home</a>
       {% elsif lang == 'vi' %}
         <a class="btn btn--primary" href="https://www.nasacode.com/vi/download">🚀 Dùng thử NasaCode miễn phí</a>
         <a class="btn btn--ghost" href="{{ '/vi/' | relative_url }}">← Trang Chủ</a>
@@ -107,7 +107,7 @@ layout: default
         <a class="btn btn--ghost" href="{{ '/tr/' | relative_url }}">← Ana Sayfa</a>
       {% else %}
         <a class="btn btn--primary" href="https://www.nasacode.com/zh/download">🚀 立即免费体验 NasaCode</a>
-        <a class="btn btn--ghost" href="{{ '/' | relative_url }}">← 返回首页</a>
+        <a class="btn btn--ghost" href="{{ '/zh/' | relative_url }}">← 返回首页</a>
       {% endif %}
     </footer>
   </article>

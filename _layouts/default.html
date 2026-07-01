@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% assign lang = page.lang | default: 'zh' %}
+{% assign lang = page.lang | default: 'en' %}
 {% if lang == 'ja' %}{% assign html_lang = 'ja' %}
 {% elsif lang == 'ko' %}{% assign html_lang = 'ko' %}
 {% elsif lang == 'vi' %}{% assign html_lang = 'vi' %}
@@ -12,7 +12,8 @@
 {% elsif lang == 'de' %}{% assign html_lang = 'de' %}
 {% elsif lang == 'nl' %}{% assign html_lang = 'nl' %}
 {% elsif lang == 'fr' %}{% assign html_lang = 'fr' %}
-{% else %}{% assign html_lang = 'zh-CN' %}{% endif %}
+{% elsif lang == 'zh' %}{% assign html_lang = 'zh-CN' %}
+{% else %}{% assign html_lang = 'en' %}{% endif %}
 <html lang="{{ html_lang }}">
 <head>
   <meta charset="utf-8">
@@ -25,8 +26,8 @@
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
   <!-- hreflang -->
-  <link rel="alternate" hreflang="zh" href="https://ursulaharrell011-dotcom.github.io/" />
-  <link rel="alternate" hreflang="en" href="https://ursulaharrell011-dotcom.github.io/en/" />
+  <link rel="alternate" hreflang="zh" href="https://ursulaharrell011-dotcom.github.io/zh/" />
+  <link rel="alternate" hreflang="en" href="https://ursulaharrell011-dotcom.github.io/" />
   <link rel="alternate" hreflang="zh-HK" href="https://ursulaharrell011-dotcom.github.io/zh-HK/" />
   <link rel="alternate" hreflang="zh-TW" href="https://ursulaharrell011-dotcom.github.io/zh-TW/" />
   <link rel="alternate" hreflang="ja" href="https://ursulaharrell011-dotcom.github.io/ja/" />
@@ -38,7 +39,7 @@
   <link rel="alternate" hreflang="de" href="https://ursulaharrell011-dotcom.github.io/de/" />
   <link rel="alternate" hreflang="nl" href="https://ursulaharrell011-dotcom.github.io/nl/" />
   <link rel="alternate" hreflang="fr" href="https://ursulaharrell011-dotcom.github.io/fr/" />
-  <link rel="alternate" hreflang="x-default" href="https://ursulaharrell011-dotcom.github.io/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://ursulaharrell011-dotcom.github.io/" />
 
   <!-- JSON-LD -->
   {% if page.layout == 'post' %}
@@ -75,7 +76,7 @@
   <script>
   (function(){
     var K='ncvpn_lang';
-    var langs=['zh-HK','zh-TW','en','ja','ko','vi','id','tr','ru','de','nl','fr'];
+    var langs=['zh','zh-HK','zh-TW','en','ja','ko','vi','id','tr','ru','de','nl','fr'];
     var p=window.location.pathname;
     for(var i=0;i<langs.length;i++){
       if(p.startsWith('/'+langs[i]+'/') || p==='/'+langs[i]){
@@ -86,11 +87,11 @@
     if(p!=='/'&&p!=='/index.html')return;
     var s;try{s=localStorage.getItem(K);}catch(e){}
     if(s&&langs.indexOf(s)!==-1){window.location.replace('/'+s+'/');return;}
-    var b=(navigator.language||'zh').toLowerCase();
+    var b=(navigator.language||'en').toLowerCase();
     var m=null;
     if(b==='zh-hk'||b==='zh-hant-hk')m='zh-HK';
     else if(b==='zh-tw'||b==='zh-hant-tw'||b==='zh-hant')m='zh-TW';
-    else if(b.startsWith('zh'))m=null;
+    else if(b.startsWith('zh'))m='zh';
     else if(b.startsWith('ja'))m='ja';
     else if(b.startsWith('ko'))m='ko';
     else if(b.startsWith('vi'))m='vi';
@@ -100,7 +101,7 @@
     else if(b.startsWith('de'))m='de';
     else if(b.startsWith('nl'))m='nl';
     else if(b.startsWith('fr'))m='fr';
-    else m='en';
+    else m=null;
     if(m){try{localStorage.setItem(K,m);}catch(e){}window.location.replace('/'+m+'/');}
   })();
   </script>
@@ -109,7 +110,7 @@
 <body>
   <header class="site-header">
     <div class="container site-header__inner">
-      {% if lang == 'zh' or lang == nil %}{% assign brand_home = '/' %}
+      {% if lang == 'en' or lang == nil %}{% assign brand_home = '/' %}
       {% else %}{% assign brand_home = lang | prepend: '/' | append: '/' %}{% endif %}
       <a class="brand" href="{{ brand_home | relative_url }}">
         <img class="brand__logo" src="{{ '/assets/images/nasacode-logo.svg' | relative_url }}" alt="NasaCode" width="34" height="34">
@@ -117,7 +118,7 @@
       </a>
       <div class="site-nav-wrap">
         <nav class="site-nav">
-          {% assign nav_items = site.data.navigation[lang] | default: site.data.navigation.zh %}
+          {% assign nav_items = site.data.navigation[lang] | default: site.data.navigation.en %}
           {% for item in nav_items %}
             <a href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
           {% endfor %}
@@ -143,10 +144,10 @@
               <span class="lang-dropdown__arrow">▾</span>
             </button>
             <ul class="lang-dropdown__menu">
-              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','zh')}catch(e){}" {% if lang == 'zh' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
+              <li><a href="/zh/" onclick="try{localStorage.setItem('ncvpn_lang','zh')}catch(e){}" {% if lang == 'zh' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
               <li><a href="/zh-HK/" onclick="try{localStorage.setItem('ncvpn_lang','zh-HK')}catch(e){}" {% if lang == 'zh-HK' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="HK" class="flag-icon"> 繁體中文(港)</a></li>
               <li><a href="/zh-TW/" onclick="try{localStorage.setItem('ncvpn_lang','zh-TW')}catch(e){}" {% if lang == 'zh-TW' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="TW" class="flag-icon"> 繁體中文(台)</a></li>
-              <li><a href="/en/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
+              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
               <li><a href="/ja/" onclick="try{localStorage.setItem('ncvpn_lang','ja')}catch(e){}" {% if lang == 'ja' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語</a></li>
               <li><a href="/ko/" onclick="try{localStorage.setItem('ncvpn_lang','ko')}catch(e){}" {% if lang == 'ko' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어</a></li>
               <li><a href="/vi/" onclick="try{localStorage.setItem('ncvpn_lang','vi')}catch(e){}" {% if lang == 'vi' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt</a></li>

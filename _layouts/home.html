@@ -2,13 +2,13 @@
 layout: default
 ---
 
-{% assign lang = page.lang | default: 'zh' %}
+{% assign lang = page.lang | default: 'en' %}
 {% case lang %}
-  {% when 'en' %}
-    {% assign h_sublabel = 'Blog · AI VPN · Streaming' %}
-    {% assign h_tagline  = 'Fast · Stable · Private' %}
-    {% assign h_pill1    = 'ChatGPT Access' %}
-    {% assign h_pill2    = 'Claude Stable' %}
+  {% when 'zh' %}
+    {% assign h_sublabel = '博客 · AI VPN · 流媒体加速' %}
+    {% assign h_tagline  = '极速 · 稳定 · 私密' %}
+    {% assign h_pill1    = 'ChatGPT 直连' %}
+    {% assign h_pill2    = 'Claude 稳定' %}
     {% assign h_pill3    = 'Netflix 4K' %}
   {% when 'vi' %}
     {% assign h_sublabel = 'Blog · AI VPN · Streaming' %}
@@ -71,24 +71,24 @@ layout: default
     {% assign h_pill2    = 'Claude Stable' %}
     {% assign h_pill3    = 'Netflix 4K' %}
   {% else %}
-    {% assign h_sublabel = '博客 · AI VPN · 流媒体加速' %}
-    {% assign h_tagline  = '极速 · 稳定 · 私密' %}
-    {% assign h_pill1    = 'ChatGPT 直连' %}
-    {% assign h_pill2    = 'Claude 稳定' %}
+    {% assign h_sublabel = 'Blog · AI VPN · Streaming' %}
+    {% assign h_tagline  = 'Fast · Stable · Private' %}
+    {% assign h_pill1    = 'ChatGPT Access' %}
+    {% assign h_pill2    = 'Claude Stable' %}
     {% assign h_pill3    = 'Netflix 4K' %}
 {% endcase %}
 
 {% case lang %}
-  {% when 'en' %}
-    {% assign label_featured = 'Featured' %}
-    {% assign label_min_read = 'min read' %}
-    {% assign label_stats1   = 'Continuously updated' %}
-    {% assign label_stats2   = '13 languages' %}
-    {% assign label_stats3   = 'Real-world tested' %}
-    {% assign cat1 = '🤖 AI Tools' %}
-    {% assign cat2 = '📺 Streaming' %}
-    {% assign cat3 = '🔐 Privacy' %}
-    {% assign cat4 = '📖 Tutorials' %}
+  {% when 'zh' %}
+    {% assign label_featured = '精选' %}
+    {% assign label_min_read = '分钟' %}
+    {% assign label_stats1   = '持续更新' %}
+    {% assign label_stats2   = '13种语言' %}
+    {% assign label_stats3   = '多地区实测' %}
+    {% assign cat1 = '🤖 AI工具' %}
+    {% assign cat2 = '📺 流媒体' %}
+    {% assign cat3 = '🔐 隐私安全' %}
+    {% assign cat4 = '📖 使用教程' %}
   {% when 'vi' %}
     {% assign label_featured = 'Nổi Bật' %}
     {% assign label_min_read = 'phút đọc' %}
@@ -190,15 +190,15 @@ layout: default
     {% assign cat3 = '🔐 Confidentialité' %}
     {% assign cat4 = '📖 Guides' %}
   {% else %}
-    {% assign label_featured = '精选' %}
-    {% assign label_min_read = '分钟' %}
-    {% assign label_stats1   = '持续更新' %}
-    {% assign label_stats2   = '13种语言' %}
-    {% assign label_stats3   = '多地区实测' %}
-    {% assign cat1 = '🤖 AI工具' %}
-    {% assign cat2 = '📺 流媒体' %}
-    {% assign cat3 = '🔐 隐私安全' %}
-    {% assign cat4 = '📖 使用教程' %}
+    {% assign label_featured = 'Featured' %}
+    {% assign label_min_read = 'min read' %}
+    {% assign label_stats1   = 'Continuously updated' %}
+    {% assign label_stats2   = '13 languages' %}
+    {% assign label_stats3   = 'Real-world tested' %}
+    {% assign cat1 = '🤖 AI Tools' %}
+    {% assign cat2 = '📺 Streaming' %}
+    {% assign cat3 = '🔐 Privacy' %}
+    {% assign cat4 = '📖 Tutorials' %}
 {% endcase %}
 
 <section class="hero">
@@ -265,7 +265,7 @@ layout: default
 </div>
 
 {% case lang %}
-  {% when 'en' %}{% assign section_title = 'Latest Articles' %}
+  {% when 'zh' %}{% assign section_title = '最新文章' %}
   {% when 'vi' %}{% assign section_title = 'Bài viết mới nhất' %}
   {% when 'ja' %}{% assign section_title = '最新記事' %}
   {% when 'ko' %}{% assign section_title = '최신 글' %}
@@ -276,7 +276,7 @@ layout: default
   {% when 'de' %}{% assign section_title = 'Neueste Artikel' %}
   {% when 'nl' %}{% assign section_title = 'Laatste artikelen' %}
   {% when 'fr' %}{% assign section_title = 'Derniers articles' %}
-  {% else %}{% assign section_title = '最新文章' %}
+  {% else %}{% assign section_title = 'Latest Articles' %}
 {% endcase %}
 
 <h2 class="section-title">{{ section_title }}</h2>
@@ -298,7 +298,7 @@ layout: default
         <span class="post-featured__meta">
           <time>{{ featured_post.date | date: '%Y-%m-%d' }}</time>{% if featured_post.categories.size > 0 %} · {{ featured_post.categories | first }}{% endif %} · {{ featured_post.content | strip_html | strip_newlines | size | divided_by: 600 | plus: 1 }} {{ label_min_read }}
         </span>
-        <span class="post-featured__more">{% case lang %}{% when 'en' %}Read more →{% when 'vi' %}Đọc thêm →{% when 'ja' %}続きを読む →{% when 'ko' %}더 읽기 →{% when 'tr' %}Devamını oku →{% when 'zh-HK' or 'zh-TW' %}閱讀全文 →{% when 'id' %}Baca selengkapnya →{% when 'ru' %}Читать далее →{% when 'de' %}Mehr lesen →{% when 'nl' %}Meer lezen →{% when 'fr' %}Lire la suite →{% else %}阅读全文 →{% endcase %}</span>
+        <span class="post-featured__more">{% case lang %}{% when 'zh' %}阅读全文 →{% when 'vi' %}Đọc thêm →{% when 'ja' %}続きを読む →{% when 'ko' %}더 읽기 →{% when 'tr' %}Devamını oku →{% when 'zh-HK' or 'zh-TW' %}閱讀全文 →{% when 'id' %}Baca selengkapnya →{% when 'ru' %}Читать далее →{% when 'de' %}Mehr lesen →{% when 'nl' %}Meer lezen →{% when 'fr' %}Lire la suite →{% else %}Read more →{% endcase %}</span>
       </div>
     </div>
   </a>
@@ -320,7 +320,7 @@ layout: default
         <p class="post-item__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 62 }}</p>
         <span class="post-item__more">
           {% case lang %}
-            {% when 'en' %}Read more →
+            {% when 'zh' %}阅读全文 →
             {% when 'vi' %}Đọc thêm →
             {% when 'ja' %}続きを読む →
             {% when 'ko' %}더 읽기 →
@@ -331,7 +331,7 @@ layout: default
             {% when 'de' %}Mehr lesen →
             {% when 'nl' %}Meer lezen →
             {% when 'fr' %}Lire la suite →
-            {% else %}阅读全文 →
+            {% else %}Read more →
           {% endcase %}
         </span>
       </div>

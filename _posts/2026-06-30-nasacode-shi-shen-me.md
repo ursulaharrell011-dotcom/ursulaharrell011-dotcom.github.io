@@ -1,6 +1,8 @@
 ---
 title: "NasaCode 是什么？AI 用户的全球网络加速利器"
 date: 2026-06-30 10:00:00 +0800
+redirect_from:
+  - /2026/06/30/nasacode-shi-shen-me/
 categories: [使用教程]
 tags: [NasaCode, AI VPN, ChatGPT, Claude, IEPL专线, 全球加速]
 lang: zh

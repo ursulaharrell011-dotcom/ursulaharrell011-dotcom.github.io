@@ -1,6 +1,6 @@
 zh:
   - title: 首页
-    url: /
+    url: /zh/
   - title: 关于
     url: /about/
   - title: 免费试用
@@ -8,7 +8,7 @@ zh:
 
 en:
   - title: Home
-    url: /en/
+    url: /
   - title: About
     url: /about/
   - title: Free Trial

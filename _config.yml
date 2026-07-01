@@ -3,7 +3,7 @@ description: >-
   NasaCode 官方博客：面向 AI 用户与开发者的全球网络加速器。稳定访问 ChatGPT、Claude、GitHub Copilot，流媒体畅享 Netflix、YouTube。
 url: "https://ursulaharrell011-dotcom.github.io"
 baseurl: ""
-lang: zh-CN
+lang: en
 
 author:
   name: "NasaCode"
@@ -25,6 +25,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 exclude:
   - Gemfile
@@ -39,6 +40,7 @@ defaults:
     values:
       layout: post
       lang: zh
+      permalink: /zh/:year/:month/:day/:title/
   - scope:
       path: ""
       type: pages
