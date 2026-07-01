@@ -144,10 +144,10 @@
               <span class="lang-dropdown__arrow">▾</span>
             </button>
             <ul class="lang-dropdown__menu">
+              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
               <li><a href="/zh/" onclick="try{localStorage.setItem('ncvpn_lang','zh')}catch(e){}" {% if lang == 'zh' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
               <li><a href="/zh-HK/" onclick="try{localStorage.setItem('ncvpn_lang','zh-HK')}catch(e){}" {% if lang == 'zh-HK' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="HK" class="flag-icon"> 繁體中文(港)</a></li>
               <li><a href="/zh-TW/" onclick="try{localStorage.setItem('ncvpn_lang','zh-TW')}catch(e){}" {% if lang == 'zh-TW' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="TW" class="flag-icon"> 繁體中文(台)</a></li>
-              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
               <li><a href="/ja/" onclick="try{localStorage.setItem('ncvpn_lang','ja')}catch(e){}" {% if lang == 'ja' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語</a></li>
               <li><a href="/ko/" onclick="try{localStorage.setItem('ncvpn_lang','ko')}catch(e){}" {% if lang == 'ko' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어</a></li>
               <li><a href="/vi/" onclick="try{localStorage.setItem('ncvpn_lang','vi')}catch(e){}" {% if lang == 'vi' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt</a></li>
