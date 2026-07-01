@@ -127,36 +127,36 @@
           <div class="lang-dropdown">
             <button class="lang-dropdown__btn" aria-label="Switch language">
               {% case lang %}
-                {% when 'en' %}<img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English
-                {% when 'vi' %}<img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt
-                {% when 'ja' %}<img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語
-                {% when 'ko' %}<img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어
-                {% when 'tr' %}<img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe
-                {% when 'zh-HK' %}<img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="HK" class="flag-icon"> 繁體中文(港)
-                {% when 'zh-TW' %}<img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="TW" class="flag-icon"> 繁體中文(台)
-                {% when 'id' %}<img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="ID" class="flag-icon"> Bahasa Indonesia
-                {% when 'ru' %}<img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="RU" class="flag-icon"> Русский
-                {% when 'de' %}<img src="https://flagcdn.com/20x15/de.png" width="20" height="15" alt="DE" class="flag-icon"> Deutsch
-                {% when 'nl' %}<img src="https://flagcdn.com/20x15/nl.png" width="20" height="15" alt="NL" class="flag-icon"> Nederlands
-                {% when 'fr' %}<img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="FR" class="flag-icon"> Français
-                {% else %}<img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文
+                {% when 'en' %}English
+                {% when 'vi' %}Tiếng Việt
+                {% when 'ja' %}日本語
+                {% when 'ko' %}한국어
+                {% when 'tr' %}Türkçe
+                {% when 'zh-HK' %}繁體中文(港)
+                {% when 'zh-TW' %}繁體中文(台)
+                {% when 'id' %}Bahasa Indonesia
+                {% when 'ru' %}Русский
+                {% when 'de' %}Deutsch
+                {% when 'nl' %}Nederlands
+                {% when 'fr' %}Français
+                {% else %}中文
               {% endcase %}
               <span class="lang-dropdown__arrow">▾</span>
             </button>
             <ul class="lang-dropdown__menu">
-              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
-              <li><a href="/zh/" onclick="try{localStorage.setItem('ncvpn_lang','zh')}catch(e){}" {% if lang == 'zh' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
-              <li><a href="/zh-HK/" onclick="try{localStorage.setItem('ncvpn_lang','zh-HK')}catch(e){}" {% if lang == 'zh-HK' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="HK" class="flag-icon"> 繁體中文(港)</a></li>
-              <li><a href="/zh-TW/" onclick="try{localStorage.setItem('ncvpn_lang','zh-TW')}catch(e){}" {% if lang == 'zh-TW' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="TW" class="flag-icon"> 繁體中文(台)</a></li>
-              <li><a href="/ja/" onclick="try{localStorage.setItem('ncvpn_lang','ja')}catch(e){}" {% if lang == 'ja' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語</a></li>
-              <li><a href="/ko/" onclick="try{localStorage.setItem('ncvpn_lang','ko')}catch(e){}" {% if lang == 'ko' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어</a></li>
-              <li><a href="/vi/" onclick="try{localStorage.setItem('ncvpn_lang','vi')}catch(e){}" {% if lang == 'vi' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt</a></li>
-              <li><a href="/id/" onclick="try{localStorage.setItem('ncvpn_lang','id')}catch(e){}" {% if lang == 'id' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="ID" class="flag-icon"> Bahasa Indonesia</a></li>
-              <li><a href="/tr/" onclick="try{localStorage.setItem('ncvpn_lang','tr')}catch(e){}" {% if lang == 'tr' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe</a></li>
-              <li><a href="/ru/" onclick="try{localStorage.setItem('ncvpn_lang','ru')}catch(e){}" {% if lang == 'ru' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="RU" class="flag-icon"> Русский</a></li>
-              <li><a href="/de/" onclick="try{localStorage.setItem('ncvpn_lang','de')}catch(e){}" {% if lang == 'de' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/de.png" width="20" height="15" alt="DE" class="flag-icon"> Deutsch</a></li>
-              <li><a href="/nl/" onclick="try{localStorage.setItem('ncvpn_lang','nl')}catch(e){}" {% if lang == 'nl' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/nl.png" width="20" height="15" alt="NL" class="flag-icon"> Nederlands</a></li>
-              <li><a href="/fr/" onclick="try{localStorage.setItem('ncvpn_lang','fr')}catch(e){}" {% if lang == 'fr' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="FR" class="flag-icon"> Français</a></li>
+              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}>English</a></li>
+              <li><a href="/zh/" onclick="try{localStorage.setItem('ncvpn_lang','zh')}catch(e){}" {% if lang == 'zh' %}class="active"{% endif %}>中文</a></li>
+              <li><a href="/zh-HK/" onclick="try{localStorage.setItem('ncvpn_lang','zh-HK')}catch(e){}" {% if lang == 'zh-HK' %}class="active"{% endif %}>繁體中文(港)</a></li>
+              <li><a href="/zh-TW/" onclick="try{localStorage.setItem('ncvpn_lang','zh-TW')}catch(e){}" {% if lang == 'zh-TW' %}class="active"{% endif %}>繁體中文(台)</a></li>
+              <li><a href="/ja/" onclick="try{localStorage.setItem('ncvpn_lang','ja')}catch(e){}" {% if lang == 'ja' %}class="active"{% endif %}>日本語</a></li>
+              <li><a href="/ko/" onclick="try{localStorage.setItem('ncvpn_lang','ko')}catch(e){}" {% if lang == 'ko' %}class="active"{% endif %}>한국어</a></li>
+              <li><a href="/vi/" onclick="try{localStorage.setItem('ncvpn_lang','vi')}catch(e){}" {% if lang == 'vi' %}class="active"{% endif %}>Tiếng Việt</a></li>
+              <li><a href="/id/" onclick="try{localStorage.setItem('ncvpn_lang','id')}catch(e){}" {% if lang == 'id' %}class="active"{% endif %}>Bahasa Indonesia</a></li>
+              <li><a href="/tr/" onclick="try{localStorage.setItem('ncvpn_lang','tr')}catch(e){}" {% if lang == 'tr' %}class="active"{% endif %}>Türkçe</a></li>
+              <li><a href="/ru/" onclick="try{localStorage.setItem('ncvpn_lang','ru')}catch(e){}" {% if lang == 'ru' %}class="active"{% endif %}>Русский</a></li>
+              <li><a href="/de/" onclick="try{localStorage.setItem('ncvpn_lang','de')}catch(e){}" {% if lang == 'de' %}class="active"{% endif %}>Deutsch</a></li>
+              <li><a href="/nl/" onclick="try{localStorage.setItem('ncvpn_lang','nl')}catch(e){}" {% if lang == 'nl' %}class="active"{% endif %}>Nederlands</a></li>
+              <li><a href="/fr/" onclick="try{localStorage.setItem('ncvpn_lang','fr')}catch(e){}" {% if lang == 'fr' %}class="active"{% endif %}>Français</a></li>
             </ul>
           </div>
         </div>
