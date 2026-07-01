@@ -100,7 +100,7 @@
     else if(b.startsWith('de'))m='de';
     else if(b.startsWith('nl'))m='nl';
     else if(b.startsWith('fr'))m='fr';
-    else if(b.startsWith('en'))m='en';
+    else m='en';
     if(m){try{localStorage.setItem(K,m);}catch(e){}window.location.replace('/'+m+'/');}
   })();
   </script>
