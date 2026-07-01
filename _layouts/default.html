@@ -18,8 +18,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/nasacode-logo.svg' | relative_url }}">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/nasacode-logo.svg' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/nasacode-logo.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/nasacode-logo.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% feed_meta %}
   {% seo %}
@@ -54,7 +54,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "NasaCode",
-      "logo": { "@type": "ImageObject", "url": "https://ursulaharrell011-dotcom.github.io/assets/images/nasacode-logo.svg" }
+      "logo": { "@type": "ImageObject", "url": "https://ursulaharrell011-dotcom.github.io/assets/images/nasacode-logo.png" }
     },
     "description": {{ page.description | default: page.excerpt | strip_html | truncate: 160 | jsonify }},
     "mainEntityOfPage": "https://ursulaharrell011-dotcom.github.io{{ page.url }}"
@@ -67,7 +67,7 @@
     "@type": "Organization",
     "name": "NasaCode",
     "url": "https://www.nasacode.com",
-    "logo": "https://ursulaharrell011-dotcom.github.io/assets/images/nasacode-logo.svg",
+    "logo": "https://ursulaharrell011-dotcom.github.io/assets/images/nasacode-logo.png",
     "sameAs": ["https://ursulaharrell011-dotcom.github.io"]
   }
   </script>
@@ -113,7 +113,7 @@
       {% if lang == 'en' or lang == nil %}{% assign brand_home = '/' %}
       {% else %}{% assign brand_home = lang | prepend: '/' | append: '/' %}{% endif %}
       <a class="brand" href="{{ brand_home | relative_url }}">
-        <img class="brand__logo" src="{{ '/assets/images/nasacode-logo.svg' | relative_url }}" alt="NasaCode" width="34" height="34">
+        <img class="brand__logo" src="{{ '/assets/images/nasacode-logo.png' | relative_url }}" alt="NasaCode" width="34" height="34">
         <span class="brand__name">NasaCode</span>
       </a>
       <div class="site-nav-wrap">

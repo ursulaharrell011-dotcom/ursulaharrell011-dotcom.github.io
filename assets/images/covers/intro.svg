@@ -23,6 +23,6 @@
     <circle r="110" fill="none" stroke="#1e84f5" stroke-opacity="0.28" stroke-width="1.8"/>
     <ellipse rx="55" ry="110" fill="none" stroke="#1e84f5" stroke-opacity="0.4" stroke-width="1.8"/>
     <clipPath id="nc-logo-clip"><rect x="-40" y="-40" width="80" height="80" rx="18"/></clipPath>
-    <image href="/assets/images/nasacode-logo.svg" x="-40" y="-40" width="80" height="80" clip-path="url(#nc-logo-clip)"/>
+    <image href="/assets/images/nasacode-logo.png" x="-40" y="-40" width="80" height="80" clip-path="url(#nc-logo-clip)"/>
   </g>
 </svg>
