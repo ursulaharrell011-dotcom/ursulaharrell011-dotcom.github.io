@@ -1,13 +1,32 @@
 ---
 layout: page
-title: 关于
-description: "NasaCode 是专为 AI 用户打造的全球网络加速器，采用 IEPL 国际专线稳定访问 ChatGPT、Claude、Gemini，并支持 4K 流媒体解锁。"
+title: "关于 NasaCode"
+description: "NasaCode — 专为 AI 用户与流媒体爱好者打造的全球网络加速器，IEPL 专线驱动，极速稳定。"
 lang: zh
 permalink: /zh/about/
 ---
 
-本站是 **NasaCode** 的官方博客，分享 AI 工具加速、ChatGPT / Claude / Gemini 稳定访问与流媒体解锁的实用经验。
+<p><strong>NasaCode</strong> 是一款专为 AI 工具重度用户和流媒体爱好者设计的全球网络加速器。</p>
 
-- **官方网站**：[https://www.nasacode.com/zh/download](https://www.nasacode.com/zh/download)
+<h2>产品特点</h2>
 
-NasaCode 是专为 AI 用户打造的全球网络加速器。采用 **IEPL 国际专线**直连，峰时不掉速，让你稳定访问 ChatGPT、Claude、Gemini，同时解锁 Netflix、YouTube、Disney+ 等流媒体 4K 画质，全平台一键连接。
+<table>
+  <thead>
+    <tr><th>特性</th><th>说明</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>IEPL 专线</td><td>国际专用数据线路，非公共云，峰时稳定不掉速</td></tr>
+    <tr><td>AI 平台优化</td><td>ChatGPT / Claude / Gemini / Copilot 专项优化</td></tr>
+    <tr><td>流媒体解锁</td><td>Netflix / YouTube / Disney+ / Spotify 全解锁</td></tr>
+    <tr><td>全平台支持</td><td>Windows / macOS / iOS / Android</td></tr>
+    <tr><td>极低延迟</td><td>全球节点 32ms 低延迟接入</td></tr>
+  </tbody>
+</table>
+
+<h2>本博客</h2>
+
+<p>本博客提供 ChatGPT、Claude 等 AI 工具的使用技巧、流媒体加速方案以及网络工具评测，内容覆盖中文、英文、越南语、日语、韩语、土耳其语六种语言。</p>
+
+<blockquote>
+  🚀 <a href="https://www.nasacode.com/zh/download">立即免费体验 NasaCode</a> — 极速直连 AI 平台，全球流媒体畅享
+</blockquote>
