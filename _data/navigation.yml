@@ -45,3 +45,59 @@ tr:
     url: /about/
   - title: Ücretsiz Dene
     url: https://www.nasacode.com/tr/download
+
+zh-HK:
+  - title: 首頁
+    url: /zh-HK/
+  - title: 關於
+    url: /about/
+  - title: 免費試用
+    url: https://www.nasacode.com/zh-HK/download
+
+zh-TW:
+  - title: 首頁
+    url: /zh-TW/
+  - title: 關於
+    url: /about/
+  - title: 免費試用
+    url: https://www.nasacode.com/zh-TW/download
+
+id:
+  - title: Beranda
+    url: /id/
+  - title: Tentang
+    url: /about/
+  - title: Coba Gratis
+    url: https://www.nasacode.com/id/download
+
+ru:
+  - title: Главная
+    url: /ru/
+  - title: О нас
+    url: /about/
+  - title: Бесплатная пробная версия
+    url: https://www.nasacode.com/ru/download
+
+de:
+  - title: Startseite
+    url: /de/
+  - title: Über uns
+    url: /about/
+  - title: Kostenlos testen
+    url: https://www.nasacode.com/de/download
+
+nl:
+  - title: Home
+    url: /nl/
+  - title: Over ons
+    url: /about/
+  - title: Gratis proberen
+    url: https://www.nasacode.com/nl/download
+
+fr:
+  - title: Accueil
+    url: /fr/
+  - title: À propos
+    url: /about/
+  - title: Essai gratuit
+    url: https://www.nasacode.com/fr/download

@@ -5,6 +5,13 @@
 {% elsif lang == 'vi' %}{% assign html_lang = 'vi' %}
 {% elsif lang == 'tr' %}{% assign html_lang = 'tr' %}
 {% elsif lang == 'en' %}{% assign html_lang = 'en' %}
+{% elsif lang == 'zh-HK' %}{% assign html_lang = 'zh-HK' %}
+{% elsif lang == 'zh-TW' %}{% assign html_lang = 'zh-TW' %}
+{% elsif lang == 'id' %}{% assign html_lang = 'id' %}
+{% elsif lang == 'ru' %}{% assign html_lang = 'ru' %}
+{% elsif lang == 'de' %}{% assign html_lang = 'de' %}
+{% elsif lang == 'nl' %}{% assign html_lang = 'nl' %}
+{% elsif lang == 'fr' %}{% assign html_lang = 'fr' %}
 {% else %}{% assign html_lang = 'zh-CN' %}{% endif %}
 <html lang="{{ html_lang }}">
 <head>
@@ -20,10 +27,17 @@
   <!-- hreflang -->
   <link rel="alternate" hreflang="zh" href="https://ursulaharrell011-dotcom.github.io/" />
   <link rel="alternate" hreflang="en" href="https://ursulaharrell011-dotcom.github.io/en/" />
-  <link rel="alternate" hreflang="vi" href="https://ursulaharrell011-dotcom.github.io/vi/" />
+  <link rel="alternate" hreflang="zh-HK" href="https://ursulaharrell011-dotcom.github.io/zh-HK/" />
+  <link rel="alternate" hreflang="zh-TW" href="https://ursulaharrell011-dotcom.github.io/zh-TW/" />
   <link rel="alternate" hreflang="ja" href="https://ursulaharrell011-dotcom.github.io/ja/" />
   <link rel="alternate" hreflang="ko" href="https://ursulaharrell011-dotcom.github.io/ko/" />
+  <link rel="alternate" hreflang="vi" href="https://ursulaharrell011-dotcom.github.io/vi/" />
+  <link rel="alternate" hreflang="id" href="https://ursulaharrell011-dotcom.github.io/id/" />
   <link rel="alternate" hreflang="tr" href="https://ursulaharrell011-dotcom.github.io/tr/" />
+  <link rel="alternate" hreflang="ru" href="https://ursulaharrell011-dotcom.github.io/ru/" />
+  <link rel="alternate" hreflang="de" href="https://ursulaharrell011-dotcom.github.io/de/" />
+  <link rel="alternate" hreflang="nl" href="https://ursulaharrell011-dotcom.github.io/nl/" />
+  <link rel="alternate" hreflang="fr" href="https://ursulaharrell011-dotcom.github.io/fr/" />
   <link rel="alternate" hreflang="x-default" href="https://ursulaharrell011-dotcom.github.io/en/" />
 
   <!-- JSON-LD -->
@@ -58,6 +72,38 @@
   </script>
   {% endif %}
 
+  <script>
+  (function(){
+    var K='ncvpn_lang';
+    var langs=['zh-HK','zh-TW','en','ja','ko','vi','id','tr','ru','de','nl','fr'];
+    var p=window.location.pathname;
+    for(var i=0;i<langs.length;i++){
+      if(p.startsWith('/'+langs[i]+'/') || p==='/'+langs[i]){
+        try{localStorage.setItem(K,langs[i]);}catch(e){}
+        return;
+      }
+    }
+    if(p!=='/'&&p!=='/index.html')return;
+    var s;try{s=localStorage.getItem(K);}catch(e){}
+    if(s&&langs.indexOf(s)!==-1){window.location.replace('/'+s+'/');return;}
+    var b=(navigator.language||'zh').toLowerCase();
+    var m=null;
+    if(b==='zh-hk'||b==='zh-hant-hk')m='zh-HK';
+    else if(b==='zh-tw'||b==='zh-hant-tw'||b==='zh-hant')m='zh-TW';
+    else if(b.startsWith('zh'))m=null;
+    else if(b.startsWith('ja'))m='ja';
+    else if(b.startsWith('ko'))m='ko';
+    else if(b.startsWith('vi'))m='vi';
+    else if(b.startsWith('id'))m='id';
+    else if(b.startsWith('tr'))m='tr';
+    else if(b.startsWith('ru'))m='ru';
+    else if(b.startsWith('de'))m='de';
+    else if(b.startsWith('nl'))m='nl';
+    else if(b.startsWith('fr'))m='fr';
+    else if(b.startsWith('en'))m='en';
+    if(m){try{localStorage.setItem(K,m);}catch(e){}window.location.replace('/'+m+'/');}
+  })();
+  </script>
   <script src="{{ '/assets/js/lazy-load.js' | relative_url }}" defer></script>
 </head>
 <body>
@@ -85,17 +131,31 @@
                 {% when 'ja' %}<img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語
                 {% when 'ko' %}<img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어
                 {% when 'tr' %}<img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe
+                {% when 'zh-HK' %}<img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="HK" class="flag-icon"> 繁體中文(港)
+                {% when 'zh-TW' %}<img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="TW" class="flag-icon"> 繁體中文(台)
+                {% when 'id' %}<img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="ID" class="flag-icon"> Bahasa Indonesia
+                {% when 'ru' %}<img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="RU" class="flag-icon"> Русский
+                {% when 'de' %}<img src="https://flagcdn.com/20x15/de.png" width="20" height="15" alt="DE" class="flag-icon"> Deutsch
+                {% when 'nl' %}<img src="https://flagcdn.com/20x15/nl.png" width="20" height="15" alt="NL" class="flag-icon"> Nederlands
+                {% when 'fr' %}<img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="FR" class="flag-icon"> Français
                 {% else %}<img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文
               {% endcase %}
               <span class="lang-dropdown__arrow">▾</span>
             </button>
             <ul class="lang-dropdown__menu">
-              <li><a href="/" {% if lang == 'zh' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
-              <li><a href="/en/" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
-              <li><a href="/vi/" {% if lang == 'vi' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt</a></li>
-              <li><a href="/ja/" {% if lang == 'ja' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語</a></li>
-              <li><a href="/ko/" {% if lang == 'ko' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어</a></li>
-              <li><a href="/tr/" {% if lang == 'tr' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe</a></li>
+              <li><a href="/" onclick="try{localStorage.setItem('ncvpn_lang','zh')}catch(e){}" {% if lang == 'zh' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
+              <li><a href="/zh-HK/" onclick="try{localStorage.setItem('ncvpn_lang','zh-HK')}catch(e){}" {% if lang == 'zh-HK' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/hk.png" width="20" height="15" alt="HK" class="flag-icon"> 繁體中文(港)</a></li>
+              <li><a href="/zh-TW/" onclick="try{localStorage.setItem('ncvpn_lang','zh-TW')}catch(e){}" {% if lang == 'zh-TW' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tw.png" width="20" height="15" alt="TW" class="flag-icon"> 繁體中文(台)</a></li>
+              <li><a href="/en/" onclick="try{localStorage.setItem('ncvpn_lang','en')}catch(e){}" {% if lang == 'en' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
+              <li><a href="/ja/" onclick="try{localStorage.setItem('ncvpn_lang','ja')}catch(e){}" {% if lang == 'ja' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語</a></li>
+              <li><a href="/ko/" onclick="try{localStorage.setItem('ncvpn_lang','ko')}catch(e){}" {% if lang == 'ko' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어</a></li>
+              <li><a href="/vi/" onclick="try{localStorage.setItem('ncvpn_lang','vi')}catch(e){}" {% if lang == 'vi' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt</a></li>
+              <li><a href="/id/" onclick="try{localStorage.setItem('ncvpn_lang','id')}catch(e){}" {% if lang == 'id' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/id.png" width="20" height="15" alt="ID" class="flag-icon"> Bahasa Indonesia</a></li>
+              <li><a href="/tr/" onclick="try{localStorage.setItem('ncvpn_lang','tr')}catch(e){}" {% if lang == 'tr' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe</a></li>
+              <li><a href="/ru/" onclick="try{localStorage.setItem('ncvpn_lang','ru')}catch(e){}" {% if lang == 'ru' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="RU" class="flag-icon"> Русский</a></li>
+              <li><a href="/de/" onclick="try{localStorage.setItem('ncvpn_lang','de')}catch(e){}" {% if lang == 'de' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/de.png" width="20" height="15" alt="DE" class="flag-icon"> Deutsch</a></li>
+              <li><a href="/nl/" onclick="try{localStorage.setItem('ncvpn_lang','nl')}catch(e){}" {% if lang == 'nl' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/nl.png" width="20" height="15" alt="NL" class="flag-icon"> Nederlands</a></li>
+              <li><a href="/fr/" onclick="try{localStorage.setItem('ncvpn_lang','fr')}catch(e){}" {% if lang == 'fr' %}class="active"{% endif %}><img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="FR" class="flag-icon"> Français</a></li>
             </ul>
           </div>
         </div>
@@ -124,6 +184,24 @@
       {% elsif lang == 'tr' %}
         <p class="site-footer__brand">AI VPN · Global Hızlandırma · Stabil Bağlantı · ChatGPT / Claude / Netflix</p>
         <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/tr/download">www.nasacode.com</a></p>
+      {% elsif lang == 'zh-HK' or lang == 'zh-TW' %}
+        <p class="site-footer__brand">AI VPN · 全球加速 · 穩定直連 · ChatGPT / Claude / Netflix 暢享</p>
+        <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/{{ lang }}/download">www.nasacode.com</a></p>
+      {% elsif lang == 'id' %}
+        <p class="site-footer__brand">AI VPN · Akselerasi Global · Koneksi Stabil · ChatGPT / Claude / Netflix</p>
+        <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/id/download">www.nasacode.com</a></p>
+      {% elsif lang == 'ru' %}
+        <p class="site-footer__brand">AI VPN · Глобальное ускорение · Стабильное соединение · ChatGPT / Claude / Netflix</p>
+        <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/ru/download">www.nasacode.com</a></p>
+      {% elsif lang == 'de' %}
+        <p class="site-footer__brand">AI VPN · Globale Beschleunigung · Stabile Verbindung · ChatGPT / Claude / Netflix</p>
+        <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/de/download">www.nasacode.com</a></p>
+      {% elsif lang == 'nl' %}
+        <p class="site-footer__brand">AI VPN · Wereldwijde versnelling · Stabiele verbinding · ChatGPT / Claude / Netflix</p>
+        <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/nl/download">www.nasacode.com</a></p>
+      {% elsif lang == 'fr' %}
+        <p class="site-footer__brand">AI VPN · Accélération mondiale · Connexion stable · ChatGPT / Claude / Netflix</p>
+        <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/fr/download">www.nasacode.com</a></p>
       {% else %}
         <p class="site-footer__brand">AI VPN · 全球加速 · 稳定直连 · ChatGPT / Claude / Netflix 畅享</p>
         <p class="site-footer__copy">© {{ site.time | date: '%Y' }} NasaCode · <a href="https://www.nasacode.com/zh/download">www.nasacode.com</a></p>
