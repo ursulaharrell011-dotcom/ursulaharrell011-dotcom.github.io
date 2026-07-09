@@ -105,6 +105,27 @@ layout: default
       {% elsif lang == 'tr' %}
         <a class="btn btn--primary" href="https://www.nasacode.com/tr/download">🚀 NasaCode'u Ücretsiz Dene</a>
         <a class="btn btn--ghost" href="{{ '/tr/' | relative_url }}">← Ana Sayfa</a>
+      {% elsif lang == 'zh-HK' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/zh-HK/download">🚀 立即免費體驗 NasaCode</a>
+        <a class="btn btn--ghost" href="{{ '/zh-HK/' | relative_url }}">← 返回首頁</a>
+      {% elsif lang == 'zh-TW' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/zh-TW/download">🚀 立即免費體驗 NasaCode</a>
+        <a class="btn btn--ghost" href="{{ '/zh-TW/' | relative_url }}">← 返回首頁</a>
+      {% elsif lang == 'id' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/id/download">🚀 Coba NasaCode Gratis</a>
+        <a class="btn btn--ghost" href="{{ '/id/' | relative_url }}">← Kembali ke Beranda</a>
+      {% elsif lang == 'ru' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/ru/download">🚀 Попробовать NasaCode бесплатно</a>
+        <a class="btn btn--ghost" href="{{ '/ru/' | relative_url }}">← На главную</a>
+      {% elsif lang == 'de' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/de/download">🚀 NasaCode kostenlos testen</a>
+        <a class="btn btn--ghost" href="{{ '/de/' | relative_url }}">← Zur Startseite</a>
+      {% elsif lang == 'nl' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/nl/download">🚀 Probeer NasaCode gratis</a>
+        <a class="btn btn--ghost" href="{{ '/nl/' | relative_url }}">← Terug naar home</a>
+      {% elsif lang == 'fr' %}
+        <a class="btn btn--primary" href="https://www.nasacode.com/fr/download">🚀 Essayer NasaCode gratuitement</a>
+        <a class="btn btn--ghost" href="{{ '/fr/' | relative_url }}">← Retour à l'accueil</a>
       {% else %}
         <a class="btn btn--primary" href="https://www.nasacode.com/zh/download">🚀 立即免费体验 NasaCode</a>
         <a class="btn btn--ghost" href="{{ '/zh/' | relative_url }}">← 返回首页</a>
@@ -125,6 +146,12 @@ layout: default
           {% when 'ja' %}AI VPN · IEPL回線 · グローバル安定加速
           {% when 'ko' %}AI VPN · IEPL 회선 · 글로벌 안정 가속
           {% when 'tr' %}AI VPN · IEPL Hattı · Global Stabil Hızlandırma
+          {% when 'zh-HK' or 'zh-TW' %}AI VPN · IEPL 專線 · 全球穩定加速
+          {% when 'id' %}AI VPN · Jalur IEPL · Akselerasi Global Stabil
+          {% when 'ru' %}AI VPN · Линия IEPL · Стабильное глобальное ускорение
+          {% when 'de' %}AI VPN · IEPL-Leitung · Stabile globale Beschleunigung
+          {% when 'nl' %}AI VPN · IEPL-lijn · Wereldwijde stabiele versnelling
+          {% when 'fr' %}AI VPN · Ligne IEPL · Accélération mondiale stable
           {% else %}AI VPN · IEPL 专线 · 全球稳定加速
         {% endcase %}
       </p>
@@ -150,6 +177,30 @@ layout: default
             <li>ChatGPT / Claude / Gemini optimize</li>
             <li>Netflix / YouTube / Spotify açık</li>
             <li>Windows / macOS / iOS / Android</li>
+          {% when 'zh-HK' or 'zh-TW' %}
+            <li>ChatGPT / Claude / Gemini 專項優化</li>
+            <li>Netflix / YouTube / Spotify 全解鎖</li>
+            <li>Windows / macOS / iOS / Android 全平台</li>
+          {% when 'id' %}
+            <li>ChatGPT / Claude / Gemini dioptimalkan</li>
+            <li>Netflix / YouTube / Spotify terbuka</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'ru' %}
+            <li>Оптимизация ChatGPT / Claude / Gemini</li>
+            <li>Разблокировка Netflix / YouTube / Spotify</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'de' %}
+            <li>ChatGPT / Claude / Gemini optimiert</li>
+            <li>Netflix / YouTube / Spotify freigeschaltet</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'nl' %}
+            <li>ChatGPT / Claude / Gemini geoptimaliseerd</li>
+            <li>Netflix / YouTube / Spotify ontgrendeld</li>
+            <li>Windows / macOS / iOS / Android</li>
+          {% when 'fr' %}
+            <li>ChatGPT / Claude / Gemini optimisés</li>
+            <li>Netflix / YouTube / Spotify débloqués</li>
+            <li>Windows / macOS / iOS / Android</li>
           {% else %}
             <li>ChatGPT / Claude / Gemini 专项优化</li>
             <li>Netflix / YouTube / Spotify 全解锁</li>
@@ -163,6 +214,12 @@ layout: default
           {% when 'ja' %}無料で始める →
           {% when 'ko' %}무료로 시작하기 →
           {% when 'tr' %}Ücretsiz Başla →
+          {% when 'zh-HK' or 'zh-TW' %}免費開始使用 →
+          {% when 'id' %}Mulai Gratis →
+          {% when 'ru' %}Начать бесплатно →
+          {% when 'de' %}Kostenlos starten →
+          {% when 'nl' %}Gratis starten →
+          {% when 'fr' %}Commencer gratuitement →
           {% else %}免费开始使用 →
         {% endcase %}
       </a>
@@ -173,6 +230,12 @@ layout: default
           {% when 'ja' %}IEPL専用回線 · AIプラットフォーム最適化
           {% when 'ko' %}IEPL 전용 회선 · AI 플랫폼 최적화
           {% when 'tr' %}IEPL özel hat · AI platformu optimize
+          {% when 'zh-HK' or 'zh-TW' %}IEPL 專線直連 · AI 平台專項優化
+          {% when 'id' %}Jalur khusus IEPL · Dioptimalkan untuk platform AI
+          {% when 'ru' %}Выделенная линия IEPL · Оптимизация под AI-платформы
+          {% when 'de' %}IEPL-Standleitung · Optimiert für KI-Plattformen
+          {% when 'nl' %}IEPL-huurlijn · Geoptimaliseerd voor AI-platforms
+          {% when 'fr' %}Ligne dédiée IEPL · Optimisé pour les plateformes IA
           {% else %}IEPL 专线直连 · AI 平台专项优化
         {% endcase %}
       </p>
@@ -186,6 +249,12 @@ layout: default
           {% when 'ja' %}おすすめ記事
           {% when 'ko' %}추천 글
           {% when 'tr' %}Önerilen Yazılar
+          {% when 'zh-HK' or 'zh-TW' %}推薦閱讀
+          {% when 'id' %}Rekomendasi
+          {% when 'ru' %}Рекомендуем
+          {% when 'de' %}Empfohlen
+          {% when 'nl' %}Aanbevolen
+          {% when 'fr' %}Recommandé
           {% else %}推荐阅读
         {% endcase %}
       </h3>

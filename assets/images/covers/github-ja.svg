@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Hiragino Sans','Yu Gothic',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#0c2160"/></linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.25" r="0.85"><stop offset="0" stop-color="#1e84f5" stop-opacity="0.35"/><stop offset="1" stop-color="#1e84f5" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05"><path d="M0 158 H1200 M0 316 H1200 M0 474 H1200 M300 0 V630 M600 0 V630 M900 0 V630"/></g>
+  <g transform="translate(80,84)">
+    <rect rx="21" width="260" height="42" fill="#1e84f5" fill-opacity="0.16" stroke="#1e84f5" stroke-opacity="0.5"/>
+    <circle cx="28" cy="21" r="8" fill="#1e84f5"/>
+    <text x="48" y="28" fill="#c0d8ff" font-size="18" font-weight="700">開発ツール · Git / GitHub</text>
+  </g>
+  <text x="80" y="278" fill="#ffffff" font-size="56" font-weight="800">Git Push が失敗続き？</text>
+  <text x="80" y="358" fill="#90c0ff" font-size="38" font-weight="700">IEPL専用回線で安定接続</text>
+  <text x="80" y="430" fill="#6a90c8" font-size="22">クローン高速化 · プッシュ安定 · Actions</text>
+  <g transform="translate(80,478)">
+    <rect rx="22" width="300" height="44" fill="#1e84f5" fill-opacity="0.18" stroke="#1e84f5" stroke-opacity="0.55"/>
+    <text x="24" y="29" fill="#c0d8ff" font-size="19" font-weight="700">🚀 無料で試す · nasacode.com</text>
+  </g>
+  <g transform="translate(940,300)">
+    <circle r="100" fill="none" stroke="#1e84f5" stroke-opacity="0.3" stroke-width="2"/>
+    <path d="M0,-58 a58,58 0 1,0 0.01,0" fill="none" stroke="#5daeff" stroke-opacity="0.4" stroke-width="2"/>
+    <clipPath id="nc-logo-clip"><rect x="-32" y="-32" width="64" height="64" rx="14"/></clipPath>
+    <image href="/assets/images/nasacode-logo.png" x="-32" y="-32" width="64" height="64" clip-path="url(#nc-logo-clip)"/>
+    <circle cx="80" cy="-55" r="10" fill="#1e84f5" stroke="none"/>
+    <text x="66" y="-42" fill="#90c0ff" font-size="10" font-weight="700">GIT</text>
+  </g>
+</svg>
