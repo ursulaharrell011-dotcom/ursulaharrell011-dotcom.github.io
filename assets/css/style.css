@@ -245,6 +245,20 @@ img { max-width: 100%; height: auto; }
   .lang-switch { padding-left: 8px; margin-left: 8px; }
 }
 
+/* 面包屑导航 */
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .82rem; color: var(--muted); margin: 0 0 18px; }
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb__sep { color: var(--border); }
+.breadcrumb__current { color: var(--fg); font-weight: 600; max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* 文章标签 */
+.post__tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; }
+.tag-chip { display: inline-block; padding: 5px 14px; border-radius: 20px; background: var(--code-bg); border: 1px solid var(--border); font-size: .82rem; color: var(--muted); }
+.tag-chip:hover { border-color: var(--accent); color: var(--accent); }
+.tag-chip--plain { cursor: default; }
+.tag-chip--plain:hover { border-color: var(--border); color: var(--muted); }
+
 /* Lazy load */
 img[data-src] { opacity: 0; transition: opacity .4s ease; }
 img[data-src].lazy--loaded { opacity: 1; }

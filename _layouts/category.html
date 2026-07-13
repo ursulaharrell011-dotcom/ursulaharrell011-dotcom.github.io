@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: 'en' %}
+{% assign cat = page.category %}
+
+{% include breadcrumb-jsonld.html %}
+{% include breadcrumb.html %}
+
+<h1 class="section-title">{{ cat }}</h1>
+
+{% assign lang_posts = site.posts | where: "lang", lang %}
+<ul class="post-list">
+  {% for post in lang_posts %}
+    {% if post.categories contains cat %}
+    <li class="post-item">
+      <a class="post-item__link" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+        <div class="post-item__media">
+          {% if post.image %}<img data-src="{{ post.image | relative_url }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'/%3E" alt="{{ post.title }}" width="1200" height="630">{% endif %}
+        </div>
+        <div class="post-item__body">
+          <div class="post-item__meta">
+            <time>{{ post.date | date: '%Y-%m-%d' }}</time>
+          </div>
+          <h3 class="post-item__title">{{ post.title }}</h3>
+          <p class="post-item__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
+          <span class="post-item__more">
+            {% case lang %}
+              {% when 'en' %}Read more →
+              {% when 'vi' %}Đọc thêm →
+              {% when 'ja' %}続きを読む →
+              {% when 'ko' %}더 읽기 →
+              {% when 'tr' %}Devamını oku →
+              {% else %}阅读全文 →
+            {% endcase %}
+          </span>
+        </div>
+      </a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

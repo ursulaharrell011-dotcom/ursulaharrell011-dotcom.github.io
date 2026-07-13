@@ -1,0 +1,27 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign nav_items = site.data.navigation[lang] | default: site.data.navigation.en %}
+{% assign home_item = nav_items | first %}
+{% assign cat_name = page.categories | first %}
+{% assign cat_page = site.pages | where: "category", cat_name | where: "lang", lang | first %}
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ home_item.url | relative_url }}">{{ home_item.title }}</a>
+  {% if page.layout == 'post' %}
+    {% if cat_name %}
+      <span class="breadcrumb__sep">/</span>
+      {% if cat_page %}
+        <a href="{{ cat_page.url | relative_url }}">{{ cat_name }}</a>
+      {% else %}
+        <span>{{ cat_name }}</span>
+      {% endif %}
+    {% endif %}
+    <span class="breadcrumb__sep">/</span>
+    <span class="breadcrumb__current">{{ page.title }}</span>
+  {% elsif page.layout == 'category' %}
+    <span class="breadcrumb__sep">/</span>
+    <span class="breadcrumb__current">{{ page.category }}</span>
+  {% elsif page.layout == 'tag' %}
+    <span class="breadcrumb__sep">/</span>
+    <span class="breadcrumb__current">{{ page.tag }}</span>
+  {% endif %}
+</nav>

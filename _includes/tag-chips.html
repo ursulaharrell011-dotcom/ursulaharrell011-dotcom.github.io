@@ -1,0 +1,13 @@
+{% if page.tags.size > 0 %}
+{% assign lang = page.lang | default: 'en' %}
+<div class="post__tags">
+  {% for t in page.tags %}
+    {% assign tag_page = site.pages | where: "tag", t | where: "lang", lang | first %}
+    {% if tag_page %}
+      <a class="tag-chip" href="{{ tag_page.url | relative_url }}">#{{ t }}</a>
+    {% else %}
+      <span class="tag-chip tag-chip--plain">#{{ t }}</span>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
