@@ -8,7 +8,7 @@ tags: [Midjourney, DALL-E, Sora, AI绘图, NasaCode]
 lang: zh
 excerpt: "Midjourney 排队超时、Sora 生成失败、DALL·E 上传图片卡住——AI 创作者最头疼的这些问题，根源都是网络。"
 description: "Midjourney 出图超时、Sora 视频生成失败、DALL·E 图片上传慢？本文分析 AI 绘图工具卡顿原因，介绍 NasaCode IEPL 专线如何改善 AI 创作体验。"
-image: /assets/images/covers/claude.svg
+image: /assets/images/covers/midjourney-ai-chuang-zuo.webp
 ---
 
 做 AI 创作的人都清楚一件事：**灵感稍纵即逝**。当你构思好一个画面，把 prompt 敲进 Midjourney，却等来一个 `Job queued...` 转圈几分钟后无响应，那种挫败感会直接打断创作节奏。

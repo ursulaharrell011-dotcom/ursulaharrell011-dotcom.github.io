@@ -8,7 +8,7 @@ tags: [SSH, 远程开发, VS Code Remote-SSH, JetBrains Gateway, AWS, IEPL专线
 lang: zh
 excerpt: "SSH 连着连着就断、VS Code Remote-SSH 卡在 'Setting up SSH Host'、终端敲字有延迟——远程开发体验差，十有八九是网络链路的问题，不是云主机配置的问题。"
 description: "SSH 连接海外云主机总掉线、VS Code Remote-SSH 连接失败、终端输入延迟高？本文分析远程开发的网络痛点，介绍 NasaCode IEPL 专线如何稳定连接 AWS / GCP / Azure 等海外云服务器。"
-image: /assets/images/covers/ssh.svg
+image: /assets/images/covers/yuancheng-kaifa-ssh-yun-zhuji.webp
 ---
 
 把开发环境搬到云端，是很多团队和个人开发者的常规操作——本地跑不动的大项目，丢到 AWS / GCP 上一台配置够高的实例里，用 VS Code Remote-SSH 或 JetBrains Gateway 连上去，本地只负责编辑器界面，编译、调试都在远端跑。

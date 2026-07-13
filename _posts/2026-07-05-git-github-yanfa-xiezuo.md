@@ -8,7 +8,7 @@ tags: [Git, GitHub, GitHub Actions, Git LFS, IEPL专线, NasaCode]
 lang: zh
 excerpt: "git push 卡在 'Writing objects' 不动、clone 大仓库到一半报错、GitHub Actions 页面转圈刷不出来——这些问题九成不是仓库的锅，是网络的锅。"
 description: "Git push / clone 超时、Git LFS 下载失败、GitHub Actions 页面加载慢？本文分析开发者访问 GitHub 的网络痛点，实测 NasaCode IEPL 专线对 Git 工作流的改善效果。"
-image: /assets/images/covers/github.svg
+image: /assets/images/covers/git-github-yanfa-xiezuo.webp
 ---
 
 写代码的人，大概率都遇到过这样的场景：改完一个功能，`git push` 敲下去，终端卡在 `Writing objects: 62%` 一动不动，等了两分钟后弹出：

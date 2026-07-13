@@ -8,7 +8,7 @@ tags: [AWS, GCP, Jira, Confluence, CI/CD, 远程办公, IEPL专线, NasaCode]
 lang: zh
 excerpt: "AWS 控制台加载慢、Jira 看板卡顿、CI/CD 面板刷不出来——跨境团队协作里，网络问题往往比想象中更隐蔽，拖慢的是整个团队的效率。"
 description: "AWS/GCP/Azure 控制台访问慢、Jira/Confluence 加载卡顿、CI/CD 面板超时？本文分析跨境研发团队的网络痛点，介绍 NasaCode IEPL 专线的团队级优化方案。"
-image: /assets/images/covers/team.svg
+image: /assets/images/covers/kuajing-yanfa-tuandui-wangluo.webp
 ---
 
 如果你所在的团队使用海外云服务（AWS、GCP、Azure）做基础设施，用 Atlassian 系的 Jira、Confluence 做项目管理和文档协作，用 GitHub Actions 或 CircleCI 做 CI/CD——你大概率已经习惯了这样的日常：

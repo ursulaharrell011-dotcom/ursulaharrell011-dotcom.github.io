@@ -8,7 +8,7 @@ tags: [Claude API, OpenAI API, AI开发, IEPL专线, NasaCode]
 lang: zh
 excerpt: "API 调用 timeout、流式输出中断、速率限制报错——这些让 AI 开发者头疼的问题，有一部分根本不是 API 问题，而是网络问题。"
 description: "Claude API、OpenAI API 调用超时、流式输出中断？本文分析 AI API 开发中的网络稳定性问题，实测 NasaCode IEPL 专线对 API 调用成功率和延迟的改善效果。"
-image: /assets/images/covers/claude.svg
+image: /assets/images/covers/ai-api-kai-fa-wen-ding.webp
 ---
 
 调用 Claude API 或 OpenAI API 做开发，遇到过这些情况吗？

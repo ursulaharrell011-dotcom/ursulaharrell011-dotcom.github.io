@@ -9,7 +9,7 @@ tags: [Git, GitHub, GitHub Actions, Git LFS, IEPL, NasaCode]
 lang: ja
 excerpt: "git push が 'Writing objects' で止まる、大きなリポジトリの clone が途中で失敗する、GitHub Actions のログが読み込めない——これらの多くは海外サーバーへのネットワーク経路の問題です。"
 description: "Git push / clone のタイムアウト、Git LFS のダウンロード失敗、GitHub Actions の読み込み遅延にお悩みの方へ。NasaCode の IEPL専用回線が開発ワークフローをどう改善するかを解説します。"
-image: /assets/images/covers/github-ja.svg
+image: /assets/images/covers/github-git-kaihatsusha-iepl.webp
 ---
 
 コードを書く人なら一度は経験があるはずです。機能を実装し終えて `git push` を叩くと、ターミナルが `Writing objects: 62%` のまま止まり、数分後にこう表示される。

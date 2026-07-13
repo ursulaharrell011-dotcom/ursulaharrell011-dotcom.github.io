@@ -8,7 +8,7 @@ tags: [Docker, Hugging Face, npm, pip, go mod, IEPL专线, NasaCode]
 lang: zh
 excerpt: "docker pull 卡在某一层不动、Hugging Face 模型下载到一半连接中断、npm install 某个包死活装不上——开发环境搭建慢，很多时候卡在下载这一步。"
 description: "Docker Hub 镜像拉取超时、Hugging Face 模型下载失败、npm/pip 安装卡顿？本文分析开发依赖下载慢的网络原因，介绍 NasaCode IEPL 专线加速方案。"
-image: /assets/images/covers/docker.svg
+image: /assets/images/covers/docker-huggingface-yilai-xiazai.webp
 ---
 
 搭建一个新的开发环境，理论上应该是"跑几条命令，等一会儿就好"的事情。但现实经常是：

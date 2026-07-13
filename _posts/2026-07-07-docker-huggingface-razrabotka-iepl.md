@@ -9,7 +9,7 @@ tags: [Docker, Hugging Face, npm, pip, go mod, IEPL, NasaCode]
 lang: ru
 excerpt: "docker pull зависает на каком-то слое, загрузка модели с Hugging Face обрывается на середине, npm install не может установить пакет — чаще всего дело не в инструментах, а в сети."
 description: "Docker Hub долго тянет образы, Hugging Face обрывает загрузку моделей, npm/pip зависают при установке? Разбираем сетевые причины и показываем, как IEPL-линия NasaCode ускоряет загрузку зависимостей разработки."
-image: /assets/images/covers/docker-ru.svg
+image: /assets/images/covers/docker-huggingface-razrabotka-iepl.webp
 ---
 
 Настройка новой среды разработки в теории должна занимать пару команд и немного ожидания. На практике часто выглядит так:

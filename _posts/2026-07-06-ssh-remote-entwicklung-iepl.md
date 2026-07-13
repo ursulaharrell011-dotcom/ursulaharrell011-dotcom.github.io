@@ -9,7 +9,7 @@ tags: [SSH, Remote-Entwicklung, VS Code Remote-SSH, JetBrains Gateway, AWS, IEPL
 lang: de
 excerpt: "SSH-Sitzungen brechen ab, VS Code Remote-SSH hängt beim Verbindungsaufbau, das Terminal reagiert spürbar verzögert — meist liegt es nicht am Cloud-Server, sondern an der Netzwerkstrecke dorthin."
 description: "SSH-Verbindungen zu Cloud-Servern brechen ab, VS Code Remote-SSH schlägt fehl, hohe Terminal-Latenz? Dieser Artikel erklärt die Netzwerkursachen und zeigt, wie NasaCode mit IEPL-Leitungen Remote-Entwicklung stabilisiert."
-image: /assets/images/covers/ssh-de.svg
+image: /assets/images/covers/ssh-remote-entwicklung-iepl.webp
 ---
 
 Die Entwicklungsumgebung in die Cloud auszulagern ist für viele Teams und Einzelentwickler Alltag: Ein Projekt, das lokal zu langsam läuft, wandert auf eine ausreichend leistungsstarke Instanz bei AWS oder GCP. Über VS Code Remote-SSH oder JetBrains Gateway verbindet man sich, während der lokale Rechner nur noch die Oberfläche stellt und Build sowie Debugging remote laufen.

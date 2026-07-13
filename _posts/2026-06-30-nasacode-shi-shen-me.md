@@ -8,7 +8,7 @@ tags: [NasaCode, AI VPN, ChatGPT, Claude, IEPL专线, 全球加速]
 lang: zh
 excerpt: "NasaCode 是一款 IEPL 专线驱动的 AI VPN，专为 ChatGPT、Claude、Gemini 等 AI 平台优化，同时支持 Netflix、YouTube 等流媒体全解锁。"
 description: "深度解析 NasaCode AI VPN：IEPL 专线、AI 平台优化、全平台支持，以及与普通 VPN 的核心差异。"
-image: /assets/images/covers/intro.svg
+image: /assets/images/covers/nasacode-shi-shen-me.webp
 ---
 
 越来越多人开始依赖 ChatGPT、Claude、Gemini 等 AI 工具提升工作效率，但网络连接不稳定始终是最大痛点。**NasaCode** 正是为解决这一问题而生。
